@@ -1,0 +1,110 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+skmParameters
+</name>
+</assembly>
+<members>
+<member name="M:skmParameters.CheckBoxListParameter.#ctor">
+	<summary>
+ The default constructor; creates a new instance of the CheckBoxListParameter object.
+ </summary>
+</member><member name="M:skmParameters.CheckBoxListParameter.#ctor(skmParameters.CheckBoxListParameter)">
+	<remarks>Used by the <see cref="M:skmParameters.CheckBoxListParameter.Clone"/> method to replicate the parameter object.</remarks>
+</member><member name="P:skmParameters.CheckBoxListParameter.ControlID">
+	<summary>
+ Specifies the ID of the CheckBoxList control on the page.
+ </summary>
+	<remarks>Note that this property value is persisted to the view state collection.
+ See http://msdn.microsoft.com/en-us/library/ms972976.aspx for
+ a more thorough discussion as to why this is essential.</remarks>
+</member><member name="M:skmParameters.CheckBoxListParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)">
+	<summary>
+ Returns the value of the parameter. For CheckBoxListParameter, this is the comma-delimited list of
+ 
+ </summary>
+</member><member name="M:skmParameters.CheckBoxListParameter.Clone">
+	<summary>
+ Creates a clone of the parameter object
+ </summary>
+	<remarks>Needs to be provided in order to support design-time parameter editing support.
+ See http://www.leftslipper.com/ShowFaq.aspx?FaqId=11 for more information.</remarks>
+</member><member name="T:skmParameters.CheckBoxListParameter">
+	<summary>
+ A custom declarative parameter that returns the selected values from a specified CheckBoxList 
+ Web control as a comma-delimited list. For instance, if the specified CheckBoxList has three
+ ListItems selected with Values 1, 4, and 9, then the Evaluate method will return a string of the
+ form: "1,4,9".
+ </summary>
+	<remarks>To filter database data given a comma-delimited list of values you'll need to create and use the Split
+ User-Defined Function, which is covered here: http://www.4guysfromrolla.com/webtech/031004-1.shtml.</remarks>
+</member><member name="M:skmParameters.TodayParameter.#ctor">
+	<summary>
+ The default constructor; creates a new instance of the TodayParameter object.
+ </summary>
+</member><member name="M:skmParameters.TodayParameter.#ctor(skmParameters.TodayParameter)">
+	<summary>
+ A protected constructor that copies the value of <i>original</i>'s <see cref="P:skmParameters.TodayParameter.IncludeTime"/> property.
+ </summary>
+	<remarks>Used by the <see cref="M:skmParameters.TodayParameter.Clone"/> method to replicate the parameter object.</remarks>
+</member><member name="P:skmParameters.TodayParameter.IncludeTime">
+	<summary>
+ Determines whether the current time is included in the date portion returned by the parameter
+ </summary>
+	<remarks>Note that this property value is persisted to the view state collection.
+ See http://msdn.microsoft.com/en-us/library/ms972976.aspx for
+ a more thorough discussion as to why this is essential.</remarks>
+</member><member name="M:skmParameters.TodayParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)">
+	<summary>
+ Returns the value of the parameter. For TodayParameter, this is the current date (and,
+ optionally, the time).
+ </summary>
+	<returns>The current date, if <see cref="P:skmParameters.TodayParameter.IncludeTime"/> is <b>False</b>; the current date
+ <i>and</i> time if <b>IncludeTime</b> is <b>True</b>.</returns>
+</member><member name="M:skmParameters.TodayParameter.Clone">
+	<summary>
+ Creates a clone of the parameter object
+ </summary>
+	<remarks>Needs to be provided in order to support design-time parameter editing support.
+ See http://www.leftslipper.com/ShowFaq.aspx?FaqId=11 for more information.</remarks>
+</member><member name="T:skmParameters.TodayParameter">
+	<summary>
+ A custom declarative parameter that returns the current date (and, optionally, the time).
+ </summary>
+	<remarks>See Eilon Lipton's blog entry at http://www.leftslipper.com/ShowFaq.aspx?FaqId=11
+ for a C# example of this custom parameter class.</remarks>
+</member><member name="M:skmParameters.MembershipUserIdParameter.#ctor">
+	<summary>
+ The default constructor; creates a new instance of the MembershipUserIdParameter object.
+ </summary>
+</member><member name="M:skmParameters.MembershipUserIdParameter.#ctor(skmParameters.MembershipUserIdParameter)">
+	<remarks>Used by the <see cref="M:skmParameters.MembershipUserIdParameter.Clone"/> method to replicate the parameter object.</remarks>
+</member><member name="M:skmParameters.MembershipUserIdParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)">
+	<summary>
+ Returns the value of the parameter. For MembershipUserIdParameter, this is the currently logged
+ on user's UserId. If the current visitor is anonymous, a value of <b>Nothing</b> (<b>null</b> in C#)
+ is returned.
+ </summary>
+</member><member name="M:skmParameters.MembershipUserIdParameter.Clone">
+	<summary>
+ Creates a clone of the parameter object
+ </summary>
+	<remarks>Needs to be provided in order to support design-time parameter editing support.
+ See http://www.leftslipper.com/ShowFaq.aspx?FaqId=11 for more information.</remarks>
+</member><member name="P:skmParameters.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:skmParameters.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:skmParameters.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
